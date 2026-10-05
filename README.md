@@ -43,11 +43,11 @@ The LED turns ON only when **both inputs are HIGH**.
 ### Truth Table
 
 | Input A | Input B | Output |
-| ------- | ------- | ------ |
-| 0       | 0       | 0      |
-| 0       | 1       | 0      |
-| 1       | 0       | 0      |
-| 1       | 1       | 1      |
+|:-------:|:-------:|:------:|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
 
 ### Arduino Code
 
@@ -74,17 +74,25 @@ void loop() {
   }
 }
 ```
-2️⃣ OR Gate
 
-The LED turns ON when at least one input is HIGH.
+---
 
-Truth Table
-Input A	Input B	Output
-0	0	0
-0	1	1
-1	0	1
-1	1	1
-Arduino Code
+## 2️⃣ OR Gate
+
+The LED turns ON when **at least one input is HIGH**.
+
+### Truth Table
+
+| Input A | Input B | Output |
+|:-------:|:-------:|:------:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+### Arduino Code
+
+```cpp
 int SWA = 2;
 int SWB = 5;
 int LED = 13;
@@ -106,17 +114,26 @@ void loop() {
     digitalWrite(LED, LOW);
   }
 }
-3️⃣ XOR Gate
+```
 
-The LED turns ON when the two inputs are different.
+---
 
-Truth Table
-Input A	Input B	Output
-0	0	0
-0	1	1
-1	0	1
-1	1	0
-Arduino Code
+## 3️⃣ XOR Gate
+
+The LED turns ON when the **two inputs are different**.
+
+### Truth Table
+
+| Input A | Input B | Output |
+|:-------:|:-------:|:------:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+### Arduino Code
+
+```cpp
 int SWA = 2;
 int SWB = 5;
 int LED = 13;
@@ -138,17 +155,26 @@ void loop() {
     digitalWrite(LED, LOW);
   }
 }
-4️⃣ NAND Gate
+```
 
-NAND is the opposite of AND. The LED remains ON except when both inputs are HIGH.
+---
 
-Truth Table
-Input A	Input B	Output
-0	0	1
-0	1	1
-1	0	1
-1	1	0
-Arduino Code
+## 4️⃣ NAND Gate
+
+NAND is the **opposite of AND**. The LED remains ON except when both inputs are HIGH.
+
+### Truth Table
+
+| Input A | Input B | Output |
+|:-------:|:-------:|:------:|
+| 0 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+### Arduino Code
+
+```cpp
 int SWA = 2;
 int SWB = 5;
 int LED = 13;
@@ -170,26 +196,43 @@ void loop() {
     digitalWrite(LED, HIGH);
   }
 }
-🔌 Circuit Connections
-Switch A
-SPDT COM → Arduino Digital Pin 2
-One side → +5V
-Other side → GND
-Switch B
-SPDT COM → Arduino Digital Pin 5
-One side → +5V
-Other side → GND
-LED
-Arduino Digital Pin 13 → 220Ω Resistor
-Resistor → LED
-LED → GND
-🖥️ Simulation
+```
 
-The circuits were designed and tested using Proteus.
+---
+
+## 🔌 Circuit Connections
+
+### Switch A
+
+- SPDT COM → Arduino Digital Pin 2
+- One side → +5V
+- Other side → GND
+
+### Switch B
+
+- SPDT COM → Arduino Digital Pin 5
+- One side → +5V
+- Other side → GND
+
+### LED
+
+- Arduino Digital Pin 13 → 220Ω Resistor
+- Resistor → LED
+- LED → GND
+
+---
+
+## 🖥️ Simulation
+
+The circuits were designed and tested using **Proteus**.
 
 The SPDT switches provide the two digital inputs, while the LED represents the logic gate output.
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
+
+```text
 Logic-Gates-Arduino/
 │
 ├── AND_Gate/
@@ -208,31 +251,44 @@ Logic-Gates-Arduino/
 │   └── Logic_Gates_Proteus.pdsprj
 │
 └── README.md
-🛠️ Tools & Technologies
-Arduino UNO
-Arduino IDE
-Proteus
-C/C++
-Digital Electronics
-📚 Learning Outcomes
+```
+
+---
+
+## 🛠️ Tools & Technologies
+
+- **Arduino UNO**
+- **Arduino IDE**
+- **Proteus**
+- **C/C++**
+- **Digital Electronics**
+
+---
+
+## 📚 Learning Outcomes
 
 Through this project, I learned:
 
-Basic Boolean logic.
-Truth tables of logic gates.
-Arduino digital input and output.
-Interfacing SPDT switches with Arduino.
-Controlling LEDs using Arduino.
-Circuit simulation using Proteus.
-Practical implementation of digital logic.
-👩‍💻 Author
+- Basic Boolean logic
+- Truth tables of logic gates
+- Arduino digital input and output
+- Interfacing SPDT switches with Arduino
+- Controlling LEDs using Arduino
+- Circuit simulation using Proteus
+- Practical implementation of digital logic
 
-Farjana Akter Mim
+---
+
+## 👩‍💻 Author
+
+**Farjana Akter Mim**
 
 Computer Science & Engineering Student
 
-⭐ Acknowledgement
+---
 
-This project was developed as a practical learning project to explore Arduino programming, digital electronics, and logic gate simulation.
+## ⭐ Acknowledgement
+
+This project was developed as a practical learning project to explore **Arduino programming, digital electronics, and logic gate simulation**.
 
 If you find this project useful, feel free to ⭐ the repository.
